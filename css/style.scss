@@ -170,6 +170,9 @@ a{
         left: 0;
         z-index: 100;
 
+        // TRANSITION
+        transition: $std-transition;
+
         &--container{
 
             @include container;
@@ -225,6 +228,13 @@ a{
             }
         }
     }
+}
+
+.sticky{
+    padding: 1rem 0;
+    background: $dark-overlay;
+    background-attachment: fixed;
+    backdrop-filter: blur(20px);
 }
 
 /* WAVE ANIMATION */

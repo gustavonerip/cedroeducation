@@ -232,6 +232,7 @@ a:hover {
   top: 0;
   left: 0;
   z-index: 100;
+  transition: all 0.3s ease;
 }
 .header--nav--container {
   width: 100%;
@@ -298,6 +299,14 @@ a:hover {
 }
 .header--hero--content button {
   margin-top: 3rem;
+}
+
+.sticky {
+  padding: 1rem 0;
+  background: rgba(2, 42, 49, 0.6);
+  background-attachment: fixed;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
 }
 
 /* WAVE ANIMATION */
