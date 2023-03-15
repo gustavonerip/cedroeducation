@@ -24,7 +24,7 @@ main {
 /* TYPOGRAPHY */
 /* LAYOUT */
 /* TRANSTIONS & ANIMATION */
-@media all and (min-width: 768px) and (max-width: 1239px) {
+@media all and (min-width: 916px) and (max-width: 1239px) {
   /* LAYOUT */
 }
 @media all and (max-width: 480px) {
@@ -35,6 +35,7 @@ body {
   font-family: "Manrope", sans-serif;
   color: #022A31;
   background-color: #F0F9FA;
+  overflow-x: hidden;
 }
 
 .container {
@@ -215,10 +216,14 @@ a:hover {
   min-height: 100vh;
   margin: 0 auto;
   z-index: 100;
-  background-color: #022A31;
+  background: #055D6B url(../images/background.jpg) no-repeat;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: background-size 1s ease;
 }
 .header--nav {
   width: 100%;

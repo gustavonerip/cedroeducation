@@ -30,6 +30,7 @@ body{
     font-family: $font-family;
     color: $darkest-color;
     background-color: $primary-color;
+    overflow-x: hidden;
 }
 .container{
     max-width: $desktop;
@@ -144,13 +145,19 @@ a{
     // POSITION
     z-index: 100;
 
-    // COLORS
-    background-color: $darkest-color;
+    // COLORS & BACKGROUND
+    background: $secondary-color url(../images/background.jpg) no-repeat;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center center;
 
     // FLEXBOX
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    // TRANSITION
+    transition: background-size 1s ease;
 
     &--nav{
         // SIZING AND SPACING
