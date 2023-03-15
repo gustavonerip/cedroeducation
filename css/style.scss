@@ -146,7 +146,6 @@ a{
 
     // COLORS
     background-color: $darkest-color;
-    border: solid 1px red;
 
     // FLEXBOX
     display: flex;
@@ -163,9 +162,6 @@ a{
         top: 0;
         left: 0;
         z-index: 100;
-
-        // COLORS
-        border: solid 1px red;
 
         &--container{
 
@@ -208,11 +204,10 @@ a{
         width: 100%;
         max-width: $desktop;
         margin: 0 auto;
-        border: solid 1px red;
+        
 
         &--content{
             max-width: 721px;
-            border: solid 1px red;
 
             p{
                 line-height: 120%;
@@ -236,7 +231,6 @@ a{
     margin: 0 auto;
 
     // COLORS
-    border: solid 1px red;
 
     &--container{
         @include container;
@@ -246,18 +240,16 @@ a{
         justify-content: space-between;
         gap: 3.125rem;
 
-        border: solid 1px red;
-
         &--img{
             width: 664px;
             height: 638px;
-            border: solid 1px red;
+            
         }
 
         &--content{
             max-width: 506px;
             margin-block: 5rem;
-            border: solid 1px red;
+            
 
             h1{
                 text-transform: uppercase;
@@ -275,11 +267,11 @@ a{
     @include section;
 
     // COLORS
-    border: solid 1px red;
+    
 
     &--container{
         @include container;
-        border: solid 1px red;
+        
 
         .section-title{
             text-align: center;
@@ -317,11 +309,11 @@ a{
 .banner{
     @include section;
 
-    border: solid 1px red;
+    
 
     &--container{
         @include container;
-        border: solid 1px red;
+        
         text-align: center;
 
         button{
@@ -336,11 +328,11 @@ a{
     @include section;
     background: $secondary-color;
 
-    border: solid 1px red;
+    
 
     &--container{
         @include container;
-        border: solid 1px red;
+        
 
         //FLEXBOX
         display: flex;
@@ -433,7 +425,7 @@ footer{
     padding-block: 1rem;
     background: $darkest-color;
     color: $primary-color;
-    border: solid 1px red;
+    
 
     text-align: center;
     font-size: $font-xsmall;
