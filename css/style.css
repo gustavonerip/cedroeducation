@@ -16,6 +16,10 @@ EMAIL: GUSTAVONERIPEIXOTO@GMAIL.COM
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 main {
   margin-block: 0;
 }
