@@ -5,6 +5,8 @@ $accent-color: #ECB213;
 $lightest-color: #F9FEFF;
 $darkest-color: #022A31;
 $dark-overlay: rgba(2,42,49,.6);
+$gradient-1: linear-gradient(180deg, #F0F9FA 0%, #F9FEFF 100%);
+$gradient-2: radial-gradient(94.28% 94.28% at 3.11% 3.17%, #022A31 0%, #055D6B 100%);
 
 /* TYPOGRAPHY */
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
