@@ -234,6 +234,7 @@ a{
     }
 }
 
+/* NAVIGATION MENU ON SCROLL */
 .sticky{
     padding: 1rem 0;
     background: $dark-overlay;
@@ -256,7 +257,7 @@ a{
   background: url(../images/wave.svg) repeat-x; 
   position: absolute;
   top: -198px;
-  width: 6400px;
+  width: 500vw;
   height: 198px;
   animation: wave 60s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
   transform: translate3d(0, 0, 0);
@@ -309,21 +310,36 @@ a{
 
             width: 100%;
             height: 100%;
+
+            flex-shrink: 1;
             
         }
 
         &--content{
             max-width: 506px;
             margin-block: 5rem;
-            
+            flex-grow: 1;
 
             h1{
                 text-transform: uppercase;
                 font-weight: 700;
+                color: $secondary-color;
 
                 span{
                     font-weight: 300;
                 }
+            }
+
+            h3{
+                margin-top: -2%;
+            }
+
+            p{
+                margin-top: 10%;
+            }
+
+            button{
+                margin-top: 15%;
             }
         }
     }
@@ -332,6 +348,8 @@ a{
 .big-square{
     width: 500px;
     height: 500px;
+    margin-left: 0%;
+    z-index: 2;
     
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -339,6 +357,7 @@ a{
     gap: 20px;
     
     transform: rotate(45deg);
+    transition: $std-transition;
   }
   
   .square-1,
@@ -375,39 +394,49 @@ a{
 
 // SERVICES
 .services{
+  /*   &::before{
+        --height: 220px;
+        content: '';
+        z-index: -1;
+        position: absolute;
+        width: 100vw;
+        height: var(--height);
+        top: calc(var(--height)*-1);
+        left: 0;
+        background: url(../images/services-bg.svg) no-repeat;
+        background-size: cover;
+        background-position: top center;
+    } */
     // SIZING AND SPACING
     @include section;
+    margin-top: 0;
+    padding-block: 0;
+    padding-top: 8rem;
+    z-index: 1;
 
-    // COLORS
-    
+    // APPEARANCE
+    background: url(../images/services-bg.svg) no-repeat;
+    background-size: 100vw auto;
+    background-position: top;
 
     &--container{
         @include container;
-        
 
         .section-title{
+            margin-bottom: 3.75rem;
             text-align: center;
             color: $primary-color;
         }
 
         &--grid{
+
             // GRID
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            display: flex;
+            justify-content: center;
             gap: 1.5rem;
-
+        
             &--card{
-                background: $primary-color;
-                padding: 2rem;
-                border-radius: 3rem;
-                text-align: center;
-                transition: $std-transition;
-                transform: scale(1);
-
-                &:hover{
-                    transform: scale(1.1);
-                }
-
+                @include card;
                 h3{
                     font-size: 1.5rem;
                     text-align: center;
@@ -416,12 +445,24 @@ a{
         }
 
     }
+    &::after{
+        --height: 160px;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: var(--height);
+        bottom: calc(var(--height) * -1);
+        left: 0;
+        background: url(../images/services-bg.svg) no-repeat;
+        background-size: cover;
+        background-position: bottom center;
+        z-index: -1;
+    }
 }
 
 .banner{
     @include section;
 
-    
 
     &--container{
         @include container;
@@ -548,7 +589,9 @@ footer{
 
 // TABLET
 @media all and (min-width: $tablet) and (max-width:calc($desktop - 1px)){
-    
+   .big-square{
+    margin-left: -15%;
+   }
 }
 
 // MOBILE

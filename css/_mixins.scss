@@ -13,8 +13,6 @@
 }
 
 
-
-
 @mixin primary-btn{
     // Layout & Shape
     outline: none;
@@ -111,6 +109,34 @@
     &:hover{
         color: $accent-color;
         letter-spacing: 2px;
+        transform: scale(1.1);
+    }
+}
+
+@mixin card{
+    // SIZING, SPACING & POSITION
+    max-width: 300px;
+    min-height: 350px;
+    padding: 1.5rem 2rem;
+
+    // FLEXBOX
+    display: flex;
+    flex-direction: column;
+
+
+    // APPEARANCE
+    background: $card-gradient;
+    border-radius: 3rem;
+
+    //CHILDREN
+    text-align: center;
+
+    //EFFECTS
+    transition: $std-transition;
+    transform: scale(1);
+
+    &:hover{
+        background: $card-gradient-hover;
         transform: scale(1.1);
     }
 }
