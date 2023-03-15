@@ -5,33 +5,104 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cedro Education Group</title>
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <header>
-            <div class="container">
-                <div class="logo"></div>
-                <nav>
-                    <a href="#">Home</a>
-                    <a href="#">About Us</a>
-                    <a href="#">Services</a>
-                    <a href="#">Features</a>
-                    <a href="#">Contact Us</a>
+        <header class="header">
+                <nav class="header--nav">
+                    <div class="header--nav--container">
+                        <div class="header--nav--container--logo">
+                            <img src="images/cedroeducation.svg" alt="Cedro Education Group Logo">
+                        </div>
+                        <div class="header--nav--container--links">
+                            <a href="#">Home</a>
+                            <a href="#">About Us</a>
+                            <a href="#">Services</a>
+                            <a href="#">Contact</a>
+                            <button class="header--nav--container--links--btn">Book Consultation</button>
+                        </div>
+                    </div>
                 </nav>
-            </div>
+                <section class="header--hero">
+                    <div class="header--hero--content">
+                        <h1 class="site-title">Instructional <span>Design</span></h1>
+                        <p class="site-bio">Organizational specialists in <span>Training</span>,<span>Learning</span> and <span>Curriculum Design</span></p>
+                        <button class="primary-btn">Book Consultation</button>
+                    </div>
+                </section>
         </header>
         <main>
-            <section class="hero">
-                <div class="container">
-                    <div class="right-side">Right side</div>
-                    <div class="left-side">Left side</div>
+            <section class="about">
+                <div class="about--container">
+                    <div class="about--container--img"></div>
+                    <div class="about--container--content">
+                        <h1>About <span>Us</span></h1>
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum tempus lorem at elementum. Quisque quis auctor tortor. Integer sit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum tempus lorem at elementum. Quisque quis auctor tortor. Integer sit.</p>
+                        <button class="terciary-btn">Read More +</button>
+                    </div>
                 </div>
             </section>
-            <section class="about"></section>
-            <section class="services"></section>
-            <section class="features"></section>
-            <section class="cta-banner"></section>
-            <section class="contact"></section>
+            <section class="services">
+                <div class="services--container">
+                    <h1 class="section-title"><span>Our</span> Services</h1>
+                    <div class="services--container--grid">
+                        <div class="services--container--grid--card">
+                            <i>Icon</i>
+                            <h3>Instructional Design</h3>
+                        </div>
+                        <div class="services--container--grid--card">
+                            <i>Icon</i>
+                            <h3>Curriculum Development</h3>
+                        </div>
+                        <div class="services--container--grid--card">
+                            <i>Icon</i>
+                            <h3>Educational Policy Development</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="banner">
+                <div class="banner--container">
+                    <h1 class="section-title"><span>Let's</span> Collaborate!</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et mauris quis nisl aliquam lobortis. Suspendisse potenti. Donec mattis elit.</p>
+                    <button class="primary-btn">Book consultation</button>
+                </div>
+            </section>
+            <section class="contact">
+                
+                <div class="contact--container">
+
+                     <!-- --------------- CONTACT INFO --------------- -->
+                    <div class="contact--container--info">
+                        <div class="logo">
+                            <img src="images/cedroeducation.svg" alt="Cedro Education Group Logo">
+                        </div>
+                    </div>
+
+                    <!-- --------------- CONTACT FORM --------------- -->
+                    <form name="contact-form" id="contact-form" action="" class="contact--container--form">
+
+                        <label>Name *</label>
+                        <input type="text" placeholder="Your Name" id="name">
+
+                        <label>Email *</label>
+                        <input type="text" placeholder="Your Email" id="phone">
+
+                        <label>Phone</label>
+                        <input type="text" placeholder="Your Phone Number" id="phone">
+                        
+
+                        <label>Message *</label>
+                        <textarea type="textarea" placeholder="Your Message" id="phone"></textarea>
+
+                        <button class="secondary-btn" type="submit">Send</button>
+                        
+                    </form>
+
+                </div>
+            </section>
         </main>
-        <footer></footer>
+        <footer>&copy; 2023 Cedro Education Group - All Rights Reserved</footer>
     </body>
 </html>

@@ -1,0 +1,453 @@
+/* 
+
+CEDRO EDUCATION GROUP 2023 - ALL RIGHTS RESERVED
+
+DEVELOPED BY: GUSTAVONERI.ART
+EMAIL: GUSTAVONERIPEIXOTO@GMAIL.COM
+
+*/
+
+/* RESET ANY BROWSER STANDARD STYLE */
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    margin-block: 0;
+}
+
+// IMPORT STYLESHEETS
+@import '_variables.scss';
+@import '_mixins.scss';
+
+/* =============================== LAYOUT ==================================== */
+
+body{
+    font-family: $font-family;
+    color: $darkest-color;
+    background-color: $primary-color;
+}
+.container{
+    max-width: $desktop;
+    margin: 0 auto;
+}
+
+
+/* =============================== GLOBAL STYLES ==================================== */
+
+h1{
+    font-size: $font-xlarge;
+    margin-block: 1rem;
+    font-weight: 700;
+}
+
+h2{
+    font-size: $font-large;
+    font-weight: 500;
+    margin-block: .5rem;
+}
+
+h3{
+    font-size: $font-medium;
+    font-weight: 700;
+    color: $secondary-color;
+    margin-block: .5rem;
+}
+p{
+    font-size: $font-medium;
+    margin-block: .5rem;
+    line-height: 150%;
+
+    span{
+        font-weight: 700;
+    }
+}
+a{
+    color: $secondary-color;
+    font-weight: 700;
+    text-decoration: none;
+    transition: $std-transition;
+
+    &:hover{
+        color: $accent-color;
+    }
+}
+
+.site-title{
+    // Font
+    font-size: 6rem;
+    color: $primary-color;
+    text-transform: uppercase;
+    font-weight: 300;
+    line-height: 86%;
+
+    span{
+        font-weight: 700;
+    }
+}
+
+.site-bio{
+    font-size: 2.25rem;
+    color: $primary-color;
+    font-weight: 300;
+    line-height: 100%;
+    span{
+        font-weight: 700;
+    }
+}
+
+.section-title{
+    text-transform: uppercase;
+    font-weight: 700;
+    span{
+        font-weight: 300;
+    }
+}
+
+/* =============================== COMPONENTS ==================================== */
+
+.primary-btn{
+    @include primary-btn;
+}
+
+.primary-btn-flipped{
+    @include primary-btn-flipped;
+}
+
+.secondary-btn{
+    @include secondary-btn;
+}
+
+.terciary-btn{
+    @include terciary-btn;
+}
+
+/* DELETE THIS LATER */
+.dark{
+    background-color: $secondary-color;
+    padding: 5rem;
+}
+
+/* =============================== SECTIONS ==================================== */
+
+// HEADER
+.header{
+    // SIZING AND SPACING
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+
+    // POSITION
+    z-index: 100;
+
+    // COLORS
+    background-color: $darkest-color;
+    border: solid 1px red;
+
+    // FLEXBOX
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &--nav{
+        // SIZING AND SPACING
+        width: 100%;
+        padding: 5rem 0 .5rem;
+
+        // POSITIONING
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+
+        // COLORS
+        border: solid 1px red;
+
+        &--container{
+
+            @include container;
+
+            // FLEXBOX
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &--links{
+                width: auto;
+
+                // FLEXBOX
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                a{
+                    color: $lightest-color;
+                    padding-inline: 1.5rem;
+                    padding-block: 1rem;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-size: $font-medium;
+                    font-weight: 300;
+
+                    &:hover{
+                        color: $accent-color;
+                    }
+                }
+
+                &--btn{
+                    @include primary-btn-flipped;
+                }
+            }
+        }
+    }
+    &--hero{
+        width: 100%;
+        max-width: $desktop;
+        margin: 0 auto;
+        border: solid 1px red;
+
+        &--content{
+            max-width: 721px;
+            border: solid 1px red;
+
+            p{
+                line-height: 120%;
+            }
+
+            button{
+                margin-top: 3rem;
+            }
+        }
+    }
+}
+
+
+
+
+// ABOUT
+.about{
+    // SIZING AND SPACING
+    @include section;
+    width: 100%;
+    margin: 0 auto;
+
+    // COLORS
+    border: solid 1px red;
+
+    &--container{
+        @include container;
+
+        //FLEXBOX
+        display: flex;
+        justify-content: space-between;
+        gap: 3.125rem;
+
+        border: solid 1px red;
+
+        &--img{
+            width: 664px;
+            height: 638px;
+            border: solid 1px red;
+        }
+
+        &--content{
+            max-width: 506px;
+            margin-block: 5rem;
+            border: solid 1px red;
+
+            h1{
+                text-transform: uppercase;
+                font-weight: 700;
+
+                span{
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}
+.services{
+    // SIZING AND SPACING
+    @include section;
+
+    // COLORS
+    border: solid 1px red;
+
+    &--container{
+        @include container;
+        border: solid 1px red;
+
+        .section-title{
+            text-align: center;
+            color: $primary-color;
+        }
+
+        &--grid{
+            // GRID
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1.5rem;
+
+            &--card{
+                background: $primary-color;
+                padding: 2rem;
+                border-radius: 3rem;
+                text-align: center;
+                transition: $std-transition;
+                transform: scale(1);
+
+                &:hover{
+                    transform: scale(1.1);
+                }
+
+                h3{
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
+            }
+        }
+
+    }
+}
+
+.banner{
+    @include section;
+
+    border: solid 1px red;
+
+    &--container{
+        @include container;
+        border: solid 1px red;
+        text-align: center;
+
+        button{
+            margin-top: 4rem;
+            margin-bottom: 7px;
+        }
+    }
+}
+
+
+.contact{
+    @include section;
+    background: $secondary-color;
+
+    border: solid 1px red;
+
+    &--container{
+        @include container;
+        border: solid 1px red;
+
+        //FLEXBOX
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        &--info{
+            width: 50%;
+            vertical-align: middle;
+            text-align: center;
+
+            img{
+                width: 356px;
+            }
+        }
+
+        &--form{
+            width: 50%;
+
+            // FLEXBOX
+            display: flex;
+            flex-direction: column;
+
+            label{
+                margin-block: .75rem;
+                padding-left: 1rem;
+                color: $primary-color;
+            }
+
+            input{
+                width: 100%;
+                height: 56px;
+                max-width: 608px;
+                border: 0;
+                vertical-align: middle;
+                padding-inline: 1rem;
+                border-radius: 28px;
+                font-size: $font-medium;
+                margin-bottom: 1rem;
+                color: $secondary-color;
+                opacity: 0.7;
+                transition: $std-transition;
+
+                &::placeholder{
+                    color: $secondary-color;
+                }
+
+                &:focus{
+                    opacity: 1;
+                }
+            }
+
+            button{
+                width: fit-content;
+                color: $primary-color;
+                border: solid 1px $primary-color;
+                margin-block: 2rem;
+            }
+
+            textarea{
+                width: 100%;
+                height: 168px;
+                max-width: 608px;
+                resize: none;
+                border: 0;
+                font-family: $font-family;
+                vertical-align: middle;
+                padding-inline: 1rem;
+                border-radius: 28px;
+                padding-block: 1rem;
+                font-size: $font-medium;
+                margin-top: .5rem;
+                color: $secondary-color;
+                opacity: 0.7;
+
+                &:focus{
+                    opacity: 1;
+                }
+
+                &::placeholder{
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    width: 100%;
+    padding-block: 1rem;
+    background: $darkest-color;
+    color: $primary-color;
+    border: solid 1px red;
+
+    text-align: center;
+    font-size: $font-xsmall;
+    bottom: 0;
+}
+
+/* =============================== MEDIA QUERIES ==================================== */
+
+// TABLET
+@media all and (min-width: $tablet) and (max-width:calc($desktop - 1px)){
+    
+}
+
+// MOBILE
+@media all and (max-width: $mobile){
+    
+}

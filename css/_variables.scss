@@ -1,0 +1,52 @@
+/* COLORS */
+$primary-color: #F0F9FA;
+$secondary-color: #055D6B;
+$accent-color: #ECB213;
+$lightest-color: #F9FEFF;
+$darkest-color: #022A31;
+
+/* TYPOGRAPHY */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+$font-family: 'Manrope', sans-serif;
+$font-xsmall: .75rem;
+$font-small: .875rem;
+$font-medium: 1rem;
+$font-large: 1.5rem;
+$font-xlarge: 2.5rem;
+
+
+/* LAYOUT */
+$section-block-padding: 5rem;
+$section-block-margin: 0;
+$section-inline-padding: 0;
+$section-inline-margin: 0;
+
+
+/* TRANSTIONS & ANIMATION */
+$std-transition: all 0.3s ease;
+
+//MEDIA QUERIES BREAKPOINTS
+$desktop: 1240px;
+$tablet: 768px;
+$mobile: 480px;
+
+
+// DESKTOP
+$default-padding: 2rem;
+$default-margin: 2rem;
+
+// TABLET
+@media all and (min-width: $tablet) and (max-width:calc($desktop - 1px)){
+    /* LAYOUT */
+        // DESKTOP
+        $default-padding: 1.5rem;
+        $default-margin: 1.5rem;
+}
+
+// MOBILE
+@media all and (max-width: $mobile){
+    /* LAYOUT */
+        // DESKTOP
+        $default-padding: 1rem;
+        $default-margin: 1rem;
+}
