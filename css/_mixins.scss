@@ -115,13 +115,15 @@
 
 @mixin card{
     // SIZING, SPACING & POSITION
-    max-width: 300px;
-    min-height: 350px;
-    padding: 1.5rem 2rem;
+    width: 300px;
+    padding: 4rem 2rem;
 
     // FLEXBOX
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 
 
     // APPEARANCE
@@ -133,10 +135,12 @@
 
     //EFFECTS
     transition: $std-transition;
-    transform: scale(1);
+    box-shadow: $card-shadow;
 
     &:hover{
         background: $card-gradient-hover;
-        transform: scale(1.1);
+        border: solid 1px $secondary-color;
+        transform: translateY(-10px);
+        box-shadow: $card-shadow-hover;
     }
 }

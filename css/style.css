@@ -18,6 +18,7 @@ EMAIL: GUSTAVONERIPEIXOTO@GMAIL.COM
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 main {
@@ -328,15 +329,15 @@ a:hover {
   background: url(../images/wave.svg) repeat-x;
   position: absolute;
   top: -198px;
-  width: 500vw;
+  width: 6400px;
   height: 198px;
-  animation: wave 60s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
   transform: translate3d(0, 0, 0);
 }
 
 .wave:nth-of-type(2) {
   top: -175px;
-  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
+  animation: wave 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
   opacity: 1;
 }
 
@@ -444,30 +445,27 @@ a:hover {
 }
 
 .services {
-  /*   &::before{
-        --height: 220px;
-        content: '';
-        z-index: -1;
-        position: absolute;
-        width: 100vw;
-        height: var(--height);
-        top: calc(var(--height)*-1);
-        left: 0;
-        background: url(../images/services-bg.svg) no-repeat;
-        background-size: cover;
-        background-position: top center;
-    } */
   width: 100%;
   padding-block: 8rem;
   margin: 0 auto;
   position: relative;
-  margin-top: 0;
-  padding-block: 0;
-  padding-top: 8rem;
+  margin-top: 8rem;
+  padding-top: 0rem;
+  padding-bottom: 0;
   z-index: 1;
-  background: url(../images/services-bg.svg) no-repeat;
-  background-size: 100vw auto;
-  background-position: top;
+  background: #055D6B;
+}
+.services::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 270px;
+  top: -270px;
+  left: 0;
+  z-index: -3;
+  background: url(../images/services_before.svg) no-repeat;
+  background-position: top center;
+  background-size: 100% 270px;
 }
 .services--container {
   width: 100%;
@@ -475,47 +473,51 @@ a:hover {
   margin: 0 auto;
 }
 .services--container .section-title {
-  margin-bottom: 3.75rem;
   text-align: center;
   color: #F0F9FA;
 }
 .services--container--grid {
+  padding-top: 20px;
   display: flex;
   justify-content: center;
   gap: 1.5rem;
 }
 .services--container--grid--card {
-  max-width: 300px;
-  min-height: 350px;
-  padding: 1.5rem 2rem;
+  width: 300px;
+  padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
   background: linear-gradient(180deg, #FFFFFF 0%, #F9FEFF 0.01%, #D9F0F2 100%);
   border-radius: 3rem;
   text-align: center;
   transition: all 0.3s ease;
-  transform: scale(1);
+  box-shadow: 0px 4px 20px rgba(19, 34, 116, 0.2);
+  transform: translateY(20px);
 }
 .services--container--grid--card:hover {
-  background: linear-gradient(180deg, #FFFFFF 0%, #F9FEFF 0.01%);
-  transform: scale(1.1);
+  background: linear-gradient(180deg, #FFFFFF 0%, #F9FEFF 0.01%, #B2E0E6 100%);
+  border: solid 1px #055D6B;
+  transform: translateY(-10px);
+  box-shadow: 0px 24px 20px rgba(5, 93, 107, 0.2);
 }
 .services--container--grid--card h3 {
   font-size: 1.5rem;
   text-align: center;
 }
 .services::after {
-  --height: 160px;
   content: "";
   position: absolute;
   width: 100%;
-  height: var(--height);
-  bottom: calc(var(--height) * -1);
+  height: 169px;
+  bottom: -169px;
   left: 0;
-  background: url(../images/services-bg.svg) no-repeat;
-  background-size: cover;
+  z-index: -3;
+  background: url(../images/services_after.svg) no-repeat;
   background-position: bottom center;
-  z-index: -1;
+  background-size: 100% 169px;
 }
 
 .banner {
@@ -523,6 +525,27 @@ a:hover {
   padding-block: 8rem;
   margin: 0 auto;
   position: relative;
+  margin-top: 50vh;
+  margin-bottom: 0;
+  padding-bottom: 302px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #055D6B;
+  color: #F0F9FA;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 358px;
+  top: -358px;
+  left: 0;
+  z-index: -2;
+  background: url(../images/top-banner.svg) no-repeat;
+  background-position: bottom center;
+  background-size: 100% 358px;
 }
 .banner--container {
   width: 100%;
@@ -540,7 +563,20 @@ a:hover {
   padding-block: 8rem;
   margin: 0 auto;
   position: relative;
-  background: #055D6B;
+  margin-top: 0;
+  background: #022A31;
+}
+.contact::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 302px;
+  top: -285px;
+  left: 0;
+  z-index: 1;
+  background: url(../images/top-contact.svg) no-repeat;
+  background-position: bottom center;
+  background-size: 100% 302px;
 }
 .contact--container {
   width: 100%;
