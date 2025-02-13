@@ -205,7 +205,7 @@ input[type="submit"] {
 
 .hero .content p {
   max-width: 480px;
-  color: var(--neutral-50);
+  margin-bottom: 2rem;
 }
 
 .hero .image {
@@ -374,6 +374,7 @@ input[type="submit"] {
 
 .cta {
   width: 100%;
+  height: fit-content;
   padding: 0;
   background: #1c3664;
   color: var(--primary-color);
@@ -385,6 +386,12 @@ input[type="submit"] {
 }
 .cta-image {
   width: 50%;
+}
+.cta-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  vertical-align: bottom;
 }
 .cta-content {
   width: 50%;
