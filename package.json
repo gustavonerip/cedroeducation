@@ -1,20 +1,14 @@
 {
   "name": "cedroeducation",
-  "version": "1.0.0",
-  "description": "",
-  "homepage": "https://github.com/gustavonerip/cedroeducation#readme",
-  "bugs": {
-    "url": "https://github.com/gustavonerip/cedroeducation/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gustavonerip/cedroeducation.git"
-  },
-  "license": "ISC",
-  "author": "",
-  "type": "commonjs",
-  "main": "index.js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.1.0"
   }
 }
