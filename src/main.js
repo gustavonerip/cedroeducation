@@ -1,3 +1,5 @@
+import { setupScrollEvent } from "./scripts/navigation.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   // Injects the decorative elements
   // 1. Create the elements
@@ -10,4 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
   //  2. Append them before closing body tag
   document.body.appendChild(detailsLeft);
   document.body.appendChild(detailsRight);
+
+  //   Initialize event listerner for the scroll function
+
+  setupScrollEvent();
 });
