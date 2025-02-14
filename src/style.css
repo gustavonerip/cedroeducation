@@ -171,14 +171,14 @@ main {
     top: 0;
     right: 0;
     z-index: 10;
-    background: white;
+    background: var(--grey-bg-color);
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
   .header__nav.hide {
     transform: translate(100%);
-    opacity: 0;
+    /* opacity: 0; */
     visibility: hidden;
-    display: none;
   }
 
   .nav__nav-links {

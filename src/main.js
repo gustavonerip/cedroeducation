@@ -1,4 +1,8 @@
-import { setupScrollEvent } from "./scripts/navigation.js";
+import {
+  setupScrollEvent,
+  toggleNav,
+  listenForBurgetClick,
+} from "./scripts/navigation.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Injects the decorative elements
@@ -16,4 +20,5 @@ document.addEventListener("DOMContentLoaded", () => {
   //   Initialize event listerner for the scroll function
 
   setupScrollEvent();
+  listenForBurgetClick();
 });
