@@ -1,26 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
-/* 
-ORGANIZE
-Cmd + P => Sort....
-Naming convention methodology
-BEM => Block Element Modifier
-.btn--secondary => --- is the modifier, etc.
+/*
+
+How I organize element PROPERTIES:
+• Box size and Positioning
+• Spacing
+• Children (Specify children behaviour within element).
+• Style (background, stroke, outline, colors, etc).
+• Type (everything text related)
+• Effects (Css special effects)
+• Animation (Animation keyframes)
+
 */
 
 /* || VARIABLES */
 :root {
-  font-family: "Manrope", sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
   /* COLORS */
-
   --main-bg-color: #fbfbfb;
   --grey-bg-color: #ebeff5;
   --splash-bg-color: 1C3664;
@@ -30,6 +25,16 @@ BEM => Block Element Modifier
   --accent-color: #f2a009;
   --neutral-50: #6f6f80;
   --base-font-size: 1rem;
+
+  /* TYPE SETTINGS*/
+  font-family: "Manrope", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* || RESET */
@@ -38,17 +43,22 @@ BEM => Block Element Modifier
   padding: 0;
   border: 0;
   box-sizing: border-box;
-  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 body {
-  font-family: "Manrope", sans-serif;
-  background: var(--main-bg-color);
-  color: var(--darkest-color);
-  overflow-x: hidden;
-  font-size: var(--base-font-size);
   min-height: 100vh;
   position: relative;
+  overflow-x: hidden;
+  background: var(--main-bg-color);
+  color: var(--darkest-color);
+  font-size: var(--base-font-size);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* || MAIN LAYOUT */
@@ -64,22 +74,58 @@ main {
 header {
   border: solid 1px red;
 }
-
 section {
   border: solid 1px blue;
 }
-
 main {
   border: solid 1px magenta;
 }
 
-footer {
-  border: solid 1px green;
-}
-
 /* || HEADER */
 .header {
+  /* Spacing */
   padding: 1.5em 0 1em;
+
+  /* Children */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.header__logo {
+  /* Box size & Positioning */
+  height: 56px;
+}
+
+.header__nav {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav__nav-links {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+}
+
+.nav__nav-links li,
+.nav__nav-links a {
+  display: block;
+}
+
+.nav__nav-links a {
+  padding: 0.5em 1em;
+  color: var(--darkest-color);
+  text-decoration: none;
+}
+
+.nav__nav-links a:hover {
+  color: var(--secondary-color);
 }
 
 /* || HERO */
@@ -97,23 +143,65 @@ footer {
   text-align: center;
   padding: 1em;
   font-size: 0.8em;
+  background: var(--darkest-color);
+  color: var(--primary-color);
 }
 
 /* || MEDIA QUERIES */
 
+/* Tablet */
+@media only screen and (max-width: 1100px) {
+  /* || HEADER */
+  .header {
+    padding: 1.25em;
+  }
+  .header__nav {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    background: white;
+  }
+
+  .header__nav.hide {
+    transform: translate(100%);
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+
+  .nav__nav-links {
+    width: 100%;
+    height: 100%;
+    padding: 0 25%;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  .nav__nav-links a {
+    width: 100%;
+    padding: 2em;
+    text-align: center;
+  }
+}
+
 /* Mobile */
 @media only screen and (max-width: 600px) {
+  /* || HEADER */
   .header {
-    padding: 1.25em 1em;
+    padding: 1em 1em;
+  }
+
+  .nav__nav-links {
+    padding: 10%;
+  }
+
+  .nav__nav-links a {
+    font-size: 1.125em;
   }
 }
-
-@media only screen and (min-width: 601px) and (max-width: 1100px) {
-  .header {
-    padding: 1.5em 1.25em;
-  }
-}
-
-/* Tablet */
 
 /* || UTILITIES */
