@@ -62,7 +62,9 @@ img {
 }
 
 /* || MAIN LAYOUT */
-header,
+header {
+  width: 100%;
+}
 section,
 main {
   width: 100%;
@@ -84,7 +86,7 @@ main {
 /* || HEADER */
 .header {
   /* Spacing */
-  padding: 1.5em 0 1em;
+  padding: 1.5em 10vw 1em;
   position: sticky;
   top: 0;
   left: 0;
@@ -135,6 +137,7 @@ main {
 /* || HERO */
 .hero {
   min-height: 80vh;
+  max-width: 100%;
 }
 
 /* || MAIN */
