@@ -6,9 +6,9 @@ export function scrollFunction() {
     document.body.scrollTop > 100 ||
     document.documentElement.scrollTop > 100
   ) {
-    header.classList.add("sticky");
+    header.classList.add("scrolled");
   } else {
-    header.classList.remove("sticky");
+    header.classList.remove("scrolled");
   }
 }
 

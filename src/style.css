@@ -105,6 +105,7 @@ main {
 }
 
 .header.scrolled {
+  padding: 1em 10vw;
   background: var(--primary-color);
   filter: drop-shadow(0px 10px 10px #6f6f8016);
 }
@@ -113,6 +114,14 @@ main {
   /* Box size & Positioning */
   height: 56px;
   z-index: 20;
+}
+
+.header__logo img {
+  height: 100%;
+}
+
+.header.scrolled .header__logo {
+  height: 36px;
 }
 
 .header__nav {
@@ -165,7 +174,7 @@ main {
 }
 
 .hero__image {
-  height: clamp(50vh, 900px, 90vh);
+  height: clamp(50vh, 900px, 80vh);
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 50%;
