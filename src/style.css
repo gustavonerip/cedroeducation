@@ -272,6 +272,49 @@ main {
   top: 80%;
 }
 
+/* || BENEFITS */
+.main__benefits {
+  padding: 5vw 0;
+  margin-top: -5vw;
+}
+
+.benefits__title {
+  font-size: 36px;
+}
+
+.benefits__title span {
+  color: var(--secondary-color);
+}
+
+.benefits__list {
+  justify-content: space-between;
+  list-style: none;
+  padding: 48px 0;
+  gap: 1rem;
+}
+
+.benefits__list li {
+  padding: 2.25vw;
+  min-height: 260px;
+  border-radius: 16px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  background: var(--grey-bg-color);
+}
+
+.benefits__list li h2 {
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 16px 0;
+  font-size: 1.125em;
+}
+.benefits__list li p {
+  text-align: center;
+}
+
 /* || FOOTER */
 .footer {
   text-align: center;
