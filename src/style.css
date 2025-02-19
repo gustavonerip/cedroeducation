@@ -76,6 +76,10 @@ main {
   margin: 0 auto;
 }
 
+i {
+  font-style: italic;
+}
+
 /* Temporary borders */
 /* header {
   border: solid 1px red;
@@ -357,6 +361,45 @@ main {
 .services__list__item a:hover {
   color: var(--accent-color);
   border-bottom-color: var(--accent-color);
+}
+
+/* || TESTIMONIALS */
+.main__testimonials {
+  padding: 5vw 0;
+}
+
+.main__testimonials h1.section__title {
+  text-align: center;
+}
+
+.testimonials__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 600px;
+}
+
+.testimonials__item {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials__item p {
+  font-size: 2em;
+  max-width: 850px;
+  text-align: center;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.testimonials__item p.testimonials__item__name {
+  color: var(--secondary-color);
+  font-size: 1em;
+  align-self: flex-end;
+  margin-top: 2em;
 }
 
 /* || FOOTER */
