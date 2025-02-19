@@ -314,6 +314,51 @@ main {
   text-align: center;
 }
 
+/* || SERVICES */
+.main__services {
+  padding: 5vw 0;
+}
+
+.main__services .section__title {
+  text-align: center;
+}
+
+.services__list {
+  padding: 2.5vw 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto-fit;
+  justify-items: stretch;
+  align-items: stretch;
+  gap: 2em;
+}
+
+.services__list__item {
+  padding: 3em 2.25em;
+  border-radius: 16px;
+  border: solid 1px #ebeff5;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.services__list__item h2 {
+  color: var(--secondary-color);
+}
+
+.services__list__item a {
+  color: var(--secondary-color);
+  font-weight: 700;
+  padding-bottom: 0.5em;
+}
+
+.services__list__item a:hover {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
 /* || FOOTER */
 .footer {
   text-align: center;
@@ -505,6 +550,11 @@ main {
   .benefits__title {
     text-align: center;
   }
+
+  /* || SERVICES */
+  .services__list {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* || COMPONENTS */
@@ -523,6 +573,19 @@ main {
 .primary_btn:hover {
   background: var(--accent-color);
   color: var(--darkest-color);
+}
+
+.terciary-btn {
+  text-decoration: none;
+  border-bottom: solid 2px var(--secondary-color);
+}
+
+.section__title {
+  font-size: 36px;
+}
+
+.section__title span {
+  color: var(--secondary-color);
 }
 
 /* || UTILITIES */
