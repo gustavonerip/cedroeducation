@@ -46,6 +46,10 @@ How I organize element PROPERTIES:
   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 100vh;
   position: relative;
@@ -59,6 +63,30 @@ img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+textarea {
+  resize: none;
+}
+input,
+textarea {
+  font-family: "Manrope", serif;
+  font-size: 1em;
+  font-weight: normal;
+}
+input[type="submit"] {
+  padding: 16px 32px;
+  cursor: pointer;
+  font-weight: 600;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 16px;
+  display: block;
+}
+
+input[type="submit"]:hover {
+  background: var(--accent-color);
+  color: var(--darkest-color);
 }
 
 /* || MAIN LAYOUT */
@@ -448,6 +476,81 @@ main {
   background: var(--accent-color);
 }
 
+/* || CONTACT */
+.main__contact {
+  padding: 5vw 0;
+  background: linear-gradient(
+    180deg,
+    rgba(251, 251, 251, 0) 80%,
+    rgba(133, 156, 185, 0.5) 100%
+  );
+}
+
+.main__contact h1 {
+  width: 100%;
+  padding: 0 0 5vw;
+  display: block;
+  text-align: center;
+}
+
+.container__column {
+  width: 100%;
+  padding: 2.5vw;
+}
+
+.container__column ul {
+  list-style: none;
+}
+
+.container__column:last-child {
+  border-left: solid 1px var(--neutral-50);
+}
+
+.contact__form {
+  width: 100%;
+  height: 100%;
+}
+.contact__form .form-group {
+  margin: 1.5em 0;
+}
+.contact__form label {
+  margin-left: 16px;
+}
+.contact__form input[type="text"],
+.contact__form input[type="email"],
+.contact__form textarea {
+  display: block;
+  width: 100%;
+  padding: 0 16px;
+  margin: 8px 0;
+  border-radius: 16px;
+  background: #ebeff5;
+}
+.contact__form textarea {
+  padding-block: 16px;
+}
+.contact__form input[type="text"],
+.contact__form input[type="email"] {
+  height: 48px;
+}
+.contact__logo {
+  margin-bottom: 2.5vw;
+  width: 247px;
+}
+.contact__content h3 {
+  color: var(--neutral-50);
+  font-weight: 400;
+  font-size: 14px;
+}
+.contact__content ul {
+  list-style: none;
+}
+.contact__content li {
+  margin: 8px 0;
+  font-weight: 700;
+  font-size: 16px;
+}
+
 /* || FOOTER */
 .footer {
   text-align: center;
@@ -592,6 +695,21 @@ main {
   .cta__content h1 {
     font-size: 3em;
     letter-spacing: -1px;
+  }
+
+  /* || CONTACT */
+  .container__column:last-child {
+    border: none;
+    margin: 10vh 0;
+  }
+
+  .contact__logo {
+    margin: 0 auto;
+    width: 150px;
+  }
+
+  .contact__content {
+    margin: 5vh auto;
   }
 
   /* || UTILITIES */
